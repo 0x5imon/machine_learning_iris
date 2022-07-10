@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from Perceptron import *
 
 s = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 
@@ -21,6 +22,8 @@ plt.scatter(X[50:100, 0], X[50:100, 1], color='blue', marker='s', label='Versico
 plt.xlabel('Sepal Length [cm]')
 plt.ylabel('Petal Length [cm]')
 plt.legend(loc='upper left')
-plt.show()
 
 #extract sepal length and petal length
+
+new_instant = Perceptron()
+new_instant.fit(X, y)
